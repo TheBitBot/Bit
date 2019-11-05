@@ -1,0 +1,14 @@
+/* Informações
+   Nome: Configs - Explicação dos valores
+   Autor: Peter_0101#4567
+   Última data de modificação: 04/10/2019
+   Linguagem: JavaScript
+*/
+
+{
+    "prefix": [Prefixo Padrão do Bot],
+    "token": [Token do Bot],
+    "mongoURI": [URI do Banco de Dados - MongoDB - Com Usuário e Senha],
+    "dblToken": [Token do Bot na Discord Bot List],
+    "shardsCount": [Número de Shards que serão iniciadas]
+}

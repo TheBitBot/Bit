@@ -1,0 +1,34 @@
+{
+  "name": "bitbot",
+  "version": "1.0.0",
+  "description": "Bit - Implementação do Jimp",
+  "main": "Sharding.js",
+  "scripts": {
+    "start": "node .",
+    "app": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BitBotCloud/Bit.git"
+  },
+  "author": "Peter_0101#4567",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/BitBotCloud/Bit/issues"
+  },
+  "homepage": "https://github.com/BitBotCloud/Bit#readme",
+  "dependencies": {
+    "dblapi.js": "^2.3.0",
+    "discloud-status": "^0.1.3",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "0.0.4",
+    "firebase-admin": "^8.7.0",
+    "form-data": "^2.5.1",
+    "fs": "0.0.1-security",
+    "jimp": "^0.8.5",
+    "node": "^12.13.0",
+    "node-fetch": "^2.6.0",
+    "ytdl-core": "^0.29.7"
+  }
+}
