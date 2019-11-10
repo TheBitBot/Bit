@@ -8,7 +8,6 @@
 {
     "prefix": [Prefixo Padrão do Bot],
     "token": [Token do Bot],
-    "mongoURI": [URI do Banco de Dados - MongoDB - Com Usuário e Senha],
     "dblToken": [Token do Bot na Discord Bot List],
     "shardsCount": [Número de Shards que serão iniciadas]
 }
