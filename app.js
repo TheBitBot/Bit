@@ -108,35 +108,37 @@ function eventsLoader() {
 	client.on('guildMemberAdd', member => {
 		var event = require('./Events/guildMemberAdd.js')
 		event(client, member, db)
+
 		var guild = member.guild
-		console.log(member.guild)
-		db.ref(`/Servidores/${guild.id}/Configs`).once('value').then(function(snapshot) {
-		  var isOnOrOff = (snapshot.val() && snapshot.val().memberJoinSistem) || 'Anonymous';
-		  
-		if(isOnOrOff === false) return;
+	
+    db.ref(`/Servidores/${guild.id}/Configs`).once('value').then(function(snapshot) {
+      var isOnOrOff = (snapshot.val() && snapshot.val().memberJoinSistem) || 'Anonymous';
+      
+    if(isOnOrOff === false) return;
+    
+  
+    db.ref(`/Servidores/${guild.id}/Configs/JoinMemberMessage`).once('value').then(function(snapshot) {
+      
+      //Pega a mensagem
+      var mensagem = (snapshot.val() && snapshot.val().message) || 'Anonymous';
+      //Pega o ID do canal no Firebase
+      var canalID = (snapshot.val() && snapshot.val().canal) || 'Anonymous';
+  
+      //Pega o canal com o ID que está no Database
+      var canal = member.guild.channels.get(canalID)
+      
+      if(canal === undefined) return;
+
+      canal.send(mensagem)
+  })
+  })
 		
-	  
-		db.ref(`/Servidores/${guild.id}/Configs/JoinMemberMessage`).once('value').then(function(snapshot) {
-		  
-		  //Pega a mensagem
-		  var mensagem = (snapshot.val() && snapshot.val().message) || 'Anonymous';
-		  //Pega o ID do canal no Firebase
-		  var canalID = (snapshot.val() && snapshot.val().canal) || 'Anonymous';
-	  
-		  //Pega o canal com o ID que está no Database
-		  var canal = member.guild.channels.get(canalID)
-		  
-		  canal.send(mensagem)
-	  })
-	  })
 	})
 	//GuildMemberRemove
 	client.on('guildMemberRemove', member => {
 		var event = require('./Events/guildMemberRemove.js')
 		event(member, db)
 	})
-
-	
 }
 
 

@@ -22,9 +22,9 @@ module.exports = {
             var mensagem = args.join(' ')
 			db.ref(`Servidores/${message.guild.id}/Configs/JoinMemberMessage`)
 			.update({
-				message: mensagem
+				message: `${mensagem}`
 			}).then(function(){
-				message.channel.send(`${message.author} Sucesso!`)
+				message.channel.send(`${message.author} Mensagem configurada com sucesso!`)
 			});
 	
 		
