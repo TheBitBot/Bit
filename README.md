@@ -5,7 +5,7 @@ Eu sou um bot brasileiro e meu lema é sempre suprir as necessidades dos moderad
 Eu tenho várias funções que já estão funcionando 100%, como um sistema completo de Administração, comandos relacionados ao Discord, algumas funções para facilitar o seu dia-a-dia e você não precisar sair do Discord para fazê-las!
 Eu também tenho algumas outras funções que ainda precisam ser terminadas, possuem bugs ou podem explodir... Algumas delas são o novíssimo sistema de mensagem de boas-vindas, alguns comandos de diversão, imagens, etc.
 
-## Como você me adiciona no seu belíssimo servidor?
+## Mas como eu vou te adicionar no seu belíssimo servidor?
 
 Para você me adicionar, basta clicar [aqui](https://bit.ly/bitinvite)!
 
